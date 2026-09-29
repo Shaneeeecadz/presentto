@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollex Technologies - Presentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #e9ecef;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        .header-bar {
+            width: 100%;
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .presentation-container {
+            width: 1000px;
+            max-width: 95%;
+            margin-top: 30px;
+            position: relative;
+        }
+
+        .slide {
+            display: none;
+            aspect-ratio: 16 / 9;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            padding: 50px;
+            box-sizing: border-box;
+            border-top: 10px solid #003366;
+            position: relative;
+            flex-direction: column;
+        }
+
+        .slide.active {
+            display: flex;
+        }
+
+        .slide-title {
+            color: #003366;
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .slide-purpose {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .slide-body {
+            display: flex;
+            gap: 30px;
+            flex: 1;
+        }
+
+        .content-col {
+            flex: 1;
+            font-size: 1.15rem;
+            line-height: 1.5;
+        }
+
+        .content-col-full {
+            flex: 1;
+            font-size: 1.15rem;
+            line-height: 1.6;
+        }
+
+        .content-col ul, .content-col-full ul {
+            padding-left: 20px;
+        }
+
+        .content-col li, .content-col-full li {
+            margin-bottom: 12px;
+        }
+
+        .visual-col {
+            flex: 0.8;
+            background-color: #f8f9fa;
+            border: 2px dashed #adb5bd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+            color: #495057;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .slide-footer {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            color: #888;
+            font-size: 1rem;
+        }
+
+        .source-tag {
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+            color: #888;
+            font-size: 0.8rem;
+        }
+
+        
+
+    
+
+        .speaker-notes-title {
+            font-weight: bold;
+            margin-top: 0;
+            color: #555;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .controls {
+            margin-top: 30px;
+            margin-bottom: 50px;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        button {
+            padding: 12px 24px;
+            cursor: pointer;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #002244;
+        }
+
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+      
+        
+    </style>
+</head>
+<body>
+
+    <div class="header-bar">
+        Enrollex Technologies Academic Presentation
+    </div>
+
+    <div class="presentation-container" id="presentation">
+
+        <!-- Slide 1 -->
+        <div class="slide active">
+            <h1 class="slide-title">Company Conceptualization: Enrollex Technologies</h1>
+            <div class="slide-purpose">Purpose: To introduce the company, the academic context, and the document's authors.</div>
+            <div class="slide-body">
+                <div class="content-col">
+                    <ul>
+                        <li><strong>Enrollex Technologies:</strong> "Enroll. Connect. Succeed."</li>
+                        <li><strong>Sector:</strong> Educational Enrollment and Management System Service Provider</li>
+                        <li><strong>Prepared by:</strong> Cadiz, Shane Gabriel; Manalansan, Edgar Nathaniel; Villanueva, Gian Jomarie</li>
+                        <li><strong>Course/Section:</strong> BSIT 2-1</li>
+                        <li><strong>Institution:</strong> Emilio Aguinaldo College</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="source-tag">Source: PDF Page 1</div>
+            <div class="slide-footer">Slide 1 / 14</div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+            <h1 class="slide-title">Data Gathering Plan: Methodology & Targets</h1>
+            <div class="slide-purpose">Purpose: To explain how operational data and operational contexts were gathered for this analysis.</div>
+            <div class="slide-body">
+                <div class="content-col">
+                    <ul>
+                        <li><strong>Target Interviewees:</strong>
+                            <ul>
+                                <li>School Registrar / Admissions Head</li>
+                                <li>IT Director / MIS Head</li>
+                                <li>College Dean / Academic Director</li>
+                            </ul>
+                        </li>
+                        <li><strong>Key Justifications:</strong>
+                            <ul>
+                                <li>Operations Manager oversees client acquisition, agreement formulation, and service boundary enforcement.</li>
+                                <li>Lead Deployment Specialist handles system installation, basic configuration, and administrator orientation.</li>
+                                <li>School Administrators provide the client-side perspective on expectation gaps.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+              
+            </div>
+            <div class="source-tag">Source: PDF Page 2</div>
+            <div class="slide-footer">Slide 2 / 14</div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+            <h1 class="slide-title">Interview Questions: Background of the Business</h1>
+            <div class="slide-purpose">Purpose: To display the specific questions used to assess the initial client contact and assessment phase.</div>
+            <div class="slide-body">
+                <div class="content-col-full">
+                    <ol>
+                        <li>How do educational institutions typically discover and initiate contact with Enrollex Technologies to inquire about the enrollment system?</li>
+                        <li>How did our team conduct the initial needs assessment, and how accurately did it capture your institution's core operational requirements?</li>
+                        <li>Describe your experience during the agreement phase—how clearly were the boundaries between our standard services and custom requests communicated to your administration?</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="source-tag">Source: PDF Page 2</div>
+            <div class="slide-footer">Slide 3 / 14</div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide">
+            <h1 class="slide-title">Interview Questions: Step-by-Step Current Operations</h1>
+            <div class="slide-purpose">Purpose: To display the specific questions used to map the deployment and support workflows.</div>
+            <div class="slide-body">
+                <div class="content-col-full">
+                    <ol start="4">
+                        <li>Starting from the day the contract was signed, could you walk me through the exact step-by-step process your staff went through during the system turnover?</li>
+                        <li>What was your team's role and experience during the installation and initial configuration phase handled by our deployment specialists?</li>
+                        <li>How was the administrator orientation conducted, and what specific steps did your staff take to transition from our training sessions to live daily operations?</li>
+                        <li>Walk me through your current standard procedure for reporting operational issues, requesting routine maintenance, or seeking assistance from our technical support team.</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="source-tag">Source: PDF Pages 2-3</div>
+            <div class="slide-footer">Slide 4 / 14</div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="slide">
+            <h1 class="slide-title">Interview Questions: Challenges and Problems</h1>
+            <div class="slide-purpose">Purpose: To display the specific questions used to identify bottlenecks and service friction.</div>
+            <div class="slide-body">
+                <div class="content-col-full">
+                    <ol start="8">
+                        <li>During the deployment and orientation phases, what specific bottlenecks, miscommunications, or delays did your institution experience that hindered a smooth transition?</li>
+                        <li>In your daily operations, where do you find the most significant gaps or mismatches between our standard service delivery and your school's actual workflows?</li>
+                        <li>What operational challenges do you face when interacting with our current technical support process, and what specific changes would help your institution's enrollment operations truly thrive?</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="source-tag">Source: PDF Page 3</div>
+            <div class="slide-footer">Slide 5 / 14</div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="slide">
+            <h1 class="slide-title">As-Is Business Process (Phase 1: Acquisition)</h1>
+            <div class="slide-purpose">Purpose: To detail the initial stages of the client engagement lifecycle.</div>
+            <div class="slide-body">
+                <div class="content-col">
+                    <ul>
+                        <li><strong>1. Client Inquiry and Assessment:</strong> Prospective institution contacts Enrollex; needs are assessed against standard features (student/course management, tracking, basic reports).</li>
+                        <li><strong>2. Scope Evaluation:</strong> Out-of-box requests are evaluated. Complex features result in rejection, standard alternatives, or a custom quotation.</li>
+                        <li><strong>3. Agreement and Billing:</strong> Scope is accepted, agreement finalized, and payment terms executed.</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="source-tag">Source: PDF Page 3</div>
+            <div class="slide-footer">Slide 6 / 14</div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="slide">
+            <h1 class="slide-title">As-Is Business Process (Phase 2: Deployment)</h1>
+            <div class="slide-purpose">Purpose: To detail the execution, training, and maintenance phases of the process.</div>
+            <div class="slide-body">
+                <div class="content-col">
+                    <ul>
+                        <li><strong>4. Installation and Configuration:</strong> Deployment team installs the standard system and sets basic configurations like institution name and user access.</li>
+                        <li><strong>5. Orientation:</strong> Enrollex provides basic user guidance and administrator training to operate centralized records.</li>
+                        <li><strong>6. Support and Maintenance:</strong> Client transitions to daily operations. Enrollex provides ongoing basic technical assistance and maintenance.</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="source-tag">Source: PDF Pages 3-4</div>
+            <div class="slide-footer">Slide 7 / 14</div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="slide">
+            <h1 class="slide-title">Detailed Flow: Inquiry & Assessment</h1>
+            <div class="slide-purpose">Purpose: To formally map the exact procedural flow and decisions for the client and assessment team.</div>
+            <div class="slide-body">
+                <div class="content-col">
+                    <ul>
+                        <li><strong>Client:</strong> Start Inquiry ➔ Submit Details.</li>
+                        <li><strong>Assessment Team:</strong> Assess vs. Standard Package.
+                            <ul>
+                                <li><em>Decision:</em> Custom Features?</li>
+                                <li>If No: Finalize Agreement.</li>
+                                <li>If Yes: Evaluate Feasibility ➔ Output Quotation OR Reject/Standard Alternative.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Client:</strong> Review Proposal ➔ Sign Agreement & Pay.</li>
+                    </ul>
+                </div>
+               
+            </div>
+            <div class="source-tag">Source: PDF Page 4</div>
+            <div class="slide-footer">Slide 8 / 14</div>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="slide">
+            <h1 class="slide-title">Detailed Flow: Deployment & Support</h1>
+            <div class="slide-purpose">Purpose: To formally map the technical execution and ongoing client engagement.</div>
+            <div class="slide-body">
+                <div class="content-col">
+                    <ul>
+                        <li><strong>Deployment Team Sequence:</strong>
+                            <ol>
+                                <li>Execute Standard Installation</li>
+                                <li>Perform Basic Configuration</li>
+                                <li>System Database Setup</li>
+                                <li>Conduct Administrator Orientation</li>
+                            </ol>
+                        </li>
+                        <li><strong>Client Action:</strong> Participate in Orientation ➔ Daily System Operation.</li>
+                        <li><strong>Ongoing:</strong> Deployment team provides continuous technical support.</li>
+                    </ul>
+                </div>
+               
+            </div>
+            <div class="source-tag">Source: PDF Page 4</div>
+            <div class="slide-footer">Slide 9 / 14</div>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="slide">
+            <h1 class="slide-title">Key System Stakeholders</h1>
+            <div class="slide-purpose">Purpose: To define the primary actors interacting with the business process.</div>
+            <div class="slide-body">
+                <div class="content-col">
+                    <ul>
+                        <li><strong>Sales/Assessment Rep:</strong> Handles inquiries, evaluates requirements, and defines service boundaries.</li>
+                        <li><strong>Deployment Specialist:</strong> Executes technical installation, basic system configuration, and client orientation.</li>
+                        <li><strong>Technical Support:</strong> Delivers ongoing basic technical assistance and maintains the system.</li>
+                        <li><strong>Client (Admin/Registrar):</strong> The primary user who purchases the service, undergoes orientation, and uses the system daily.</li>
+                    </ul>
+                </div>
+              
+            </div>
+            <div class="source-tag">Source: PDF Page 5</div>
+            <div class="slide-footer">Slide 10 / 14</div>
+        </div>
+
+        <!-- Slide 11 -->
+        <div class="slide">
+            <h1 class="slide-title">Business Rules and Policies</h1>
+            <div class="slide-purpose">Purpose: To outline the restrictive guidelines Enrollex uses to standardize service delivery.</div>
+            <div class="slide-body">
+                <div class="content-col">
+                    <ul>
+                        <li><strong>Standardization Rule:</strong> Provides a ready-made template; will NOT develop a new system from scratch for a single client.</li>
+                        <li><strong>Boundary Enforcement:</strong> Complex third-party integrations are not automatically included and evaluated separately.</li>
+                        <li><strong>Configuration Limits:</strong> Only supported settings (e.g., institution name) are included without extra charges.</li>
+                        <li><strong>Support Scope:</strong> Strictly limited to keeping the standard system functional, secure, and usable.</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="source-tag">Source: PDF Page 5</div>
+            <div class="slide-footer">Slide 11 / 14</div>
+        </div>
+
+        <!-- Slide 12 -->
+        <div class="slide">
+            <h1 class="slide-title">Problem Identification & Impacts</h1>
+            <div class="slide-purpose">Purpose: To present the three primary bottlenecks currently hindering Enrollex Technologies.</div>
+            <div class="slide-body">
+                <div class="content-col">
+                    <ul>
+                        <li><strong>1. Manual Evaluation of Custom Requests:</strong> Causes severe pre-sales bottlenecks, delays revenue, and requires heavy admin effort.</li>
+                        <li><strong>2. Misalignment of Client Expectations:</strong> Clients assuming custom workflows are free leads to dissatisfaction and contract cancellations.</li>
+                        <li><strong>3. Resource Strain During Orientation:</strong> Manual, consultant-led training limits simultaneous onboarding and restricts scalability.</li>
+                    </ul>
+                </div>
+              
+            </div>
+            <div class="source-tag">Source: PDF Pages 5-6</div>
+            <div class="slide-footer">Slide 12 / 14</div>
+        </div>
+
+        <!-- Slide 13 -->
+        <div class="slide">
+            <h1 class="slide-title">Business Improvement Opportunities</h1>
+            <div class="slide-purpose">Purpose: To present proposed solutions that directly address the identified operational problems.</div>
+            <div class="slide-body">
+                <div class="content-col">
+                    <ul>
+                        <li><strong>Streamline Client Qualification:</strong> Implement automated self-assessment checklists prior to sales consultations.</li>
+                        <li><strong>Standardize Customization Pricing:</strong> Develop a predefined, tiered pricing matrix for frequent configurations to reduce negotiation.</li>
+                        <li><strong>Automate Client Onboarding:</strong> Transition to a self-paced, digital onboarding academy with video guides for simultaneous training.</li>
+                    </ul>
+                </div>
+                
+            </div>
+            <div class="source-tag">Source: PDF Page 6</div>
+            <div class="slide-footer">Slide 13 / 14</div>
+        </div>
+
+        <!-- Slide 14 -->
+        <div class="slide">
+            <h1 class="slide-title">Summary and Conclusions</h1>
+            <div class="slide-purpose">Purpose: To conclude the presentation by tying together the process analysis.</div>
+            <div class="slide-body">
+                <div class="content-col">
+                    <ul>
+                        <li><strong>Operational Baseline:</strong> Enrollex operates on a strict service-provider model delivering standardized software.</li>
+                        <li><strong>Process Bottlenecks:</strong> Manual evaluations, misaligned expectations, and resource-heavy manual training severely limit scalability.</li>
+                        <li><strong>Strategic Path Forward:</strong> Automate client qualification, standardize customization pricing, and digitize the administrator orientation process.</li>
+                    </ul>
+                </div>
+               
+            </div>
+            <div class="source-tag">Source: PDF Pages 1-6</div>
+            <div class="slide-footer">Slide 14 / 14</div>
+        </div>
+
+    </div>
+
+    <!-- Speaker Notes Box -->
+  s
+
+    <!-- Navigation Controls -->
+    <div class="controls">
+        <button id="prevBtn" onclick="changeSlide(-1)">&#8592; Previous</button>
+        <span style="font-weight: bold; width: 80px; text-align: center;" id="slideCounter">1 / 14</span>
+        <button id="nextBtn" onclick="changeSlide(1)">Next &#8594;</button>
+       
+    </div>
+
+    <script>
+        const notesData = [
+            "Welcome, everyone. Today's presentation covers the company conceptualization and business process analysis for Enrollex Technologies, an educational enrollment and management system service provider. The system operates under the tagline, 'Enroll. Connect. Succeed.'. This conceptualization was prepared by Shane Gabriel Cadiz, Edgar Nathaniel Manalansan, and Gian Jomarie Villanueva from BSIT 2-1 at Emilio Aguinaldo College. We will be analyzing their current processes and exploring improvement opportunities.",
+            "To accurately assess operations, the team established a structured data gathering plan. We targeted prospective client institutions, focusing on the School Registrar, IT Director, and College Dean. By capturing both the provider's perspective—such as the Operations Manager—and the client's perspective, we can successfully identify friction points during the onboarding process.",
+            "To gather accurate data on the initial sales and agreement phase, the team posed three distinct questions focusing on client discovery, needs assessment, and the clarity of service boundaries during contract negotiations.",
+            "Moving beyond initial agreements, these four questions track the exact step-by-step workflow from contract signing to daily support. They assess the installation experience, administrator orientation, and standard technical support protocols.",
+            "The final set of questions seeks to uncover explicit bottlenecks. By asking institutions directly about gaps between standard delivery and actual workflows, the research accurately identifies the operational friction points that require improvement.",
+            "Enrollex follows a service-provider model centered around deploying a standard template. The process begins with Client Inquiry, where a client's needs are evaluated against standard features. Next is Scope Evaluation. If complex integrations are requested, Enrollex evaluates to reject, offer alternatives, or provide a quotation. Once finalized, payment terms are executed.",
+            "Following the agreement, the Deployment Team executes Installation and Configuration. They install the standard system and apply basic configurations like initial user access. Step 5 is Orientation, where Enrollex provides guidance so the school can manage records. Finally, Enrollex provides ongoing technical support and maintenance.",
+            "Looking at the workflow, the process starts with the client submitting inquiry details. The Assessment Team evaluates this against the standard package. A decision node occurs: Are custom features requested? If no, they finalize the agreement. If yes, feasible requests result in a Quotation, while unfeasible ones result in rejection. The client then reviews, signs, and pays.",
+            "After payment processing, the Deployment Team takes over. Their sequential workflow is executing standard installation, basic configuration, and system database setup. Once complete, they conduct Administrator Orientation. This concludes active onboarding, leading to 'Daily System Operation'. Simultaneously, the Team transitions to providing ongoing support.",
+            "To understand the process, we define the actors. The Sales Representative serves as the gatekeeper handling inquiries. The Deployment Specialist is the technical executor for installation and orientation. The Technical Support team maintains the system post-launch. The Client is the primary stakeholder who purchases and uses the system.",
+            "Enrollex’s operational model depends on standardization. The baseline policy is the Standardization Rule: they will absolutely not build a new system from scratch. Boundary Enforcement dictates complex integrations are evaluated independently. Configuration Limits mean clients only receive basic settings free of charge. The Support Scope strictly covers standard functionality.",
+            "Our analysis identified three bottlenecks. First, because custom requests are evaluated manually, Enrollex suffers pre-sales bottlenecks. Second, despite boundaries, clients assume custom workflows are included, creating friction and cancellations when fees apply. Third, consultant-led orientation restricts scalability; Enrollex cannot onboard many clients simultaneously.",
+            "To resolve these, the document proposes three opportunities. First, implement an automated self-assessment checklist before sales calls. Second, create a tiered pricing matrix for common requests, bypassing manual evaluations. Finally, build a digital onboarding academy with automated modules, allowing Enrollex to scale up simultaneous onboarding.",
+            "In conclusion, Enrollex relies on a highly standardized model that currently suffers from manual bottlenecks. Manual evaluations and consultant-led training restrict scalability, while mismatched expectations threaten retention. By transitioning to automated assessments, pricing matrices, and digitized orientation, Enrollex can successfully scale its operations."
+        ];
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const notesText = document.getElementById('notesText');
+        const slideCounter = document.getElementById('slideCounter');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const speakerNotes = document.getElementById('speakerNotes');
+        let notesVisible = false;
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                }
+            });
+            
+            notesText.innerHTML = notesData[currentSlide];
+            slideCounter.innerText = `${currentSlide + 1} / ${slides.length}`;
+            
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === slides.length - 1;
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = 0;
+            if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+            updateSlide();
+        }
+
+        function toggleNotes() {
+            notesVisible = !notesVisible;
+            if (notesVisible) {
+                speakerNotes.classList.add('active');
+            } else {
+                speakerNotes.classList.remove('active');
+            }
+        }
+
+        updateSlide();
+    </script>
+</body>
+</html>
